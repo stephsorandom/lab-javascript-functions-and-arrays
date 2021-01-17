@@ -6,6 +6,8 @@ function maxOfTwoNumbers (a,b) {
     return b
   }
 }
+// console.log(maxOfTwoNumbers(7,8))
+
 // Iteration #2: Find longest word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 function findLongestWord (list1) {
@@ -56,37 +58,72 @@ average = total / averageWordLength.length
 (averageWordLength);
 
 // Iteration #5: Unique arrays
-// const wordsUnique = [
-//   'crab',
-//   'poison',
-//   'contagious',
-//   'simple',
-//   'bring',
-//   'sharp',
-//   'playground',
-//   'poison',
-//   'communion',
-//   'simple',
-//   'bring'
-// ];
+const wordsUnique = [
+  'crab',
+  'poison',
+  'contagious',
+  'simple',
+  'bring',
+  'sharp',
+  'playground',
+  'poison',
+  'communion',
+  'simple',
+  'bring'
+];
+function uniquifyArray (wordsUnique) {
+  let words = {}
+for (let i=0; i<wordsUnique.length; i++) {
+let word=wordsUnique[i]
+words[word]=1
+console.log(words)
+}
+return Object.keys(words)
+} 
+console.log(uniquifyArray(wordsUnique))
 
 // // Iteration #6: Find elements
-// const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
+const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
+function doesWordExist (wordsFind, word) {
+  // let word= 'eating'
+// return wordsFind.includes('matter')
+  for (let i = 0; i < wordsFind.length; i++) {
+      if (wordsFind[i] === word) {
+          return true
+      }   
+} 
+return false
+}
+console.log(doesWordExist(wordsFind, 'eating'))
+console.log(doesWordExist(wordsFind, 'amanda'))
 
 // // Iteration #7: Count repetition
-// const wordsCount = [
-//   'machine',
-//   'matter',
-//   'subset',
-//   'trouble',
-//   'starting',
-//   'matter',
-//   'eating',
-//   'matter',
-//   'truth',
-//   'disobedience',
-//   'matter'
-// ];
+const wordsCount = [
+  'machine',
+  'matter',
+  'subset',
+  'trouble',
+  'starting',
+  'matter',
+  'eating',
+  'matter',
+  'truth',
+  'disobedience',
+  'matter'
+];
+
+function howManyTimes(wordsCount, word) {
+  let n= 0;
+  for (let i=0; i<wordsCount.length; i++){
+    if(wordsCount[i]==word){n++}
+}
+return n
+}
+
+console.log(howManyTimes(wordsCount,'starting'))
+
+
+
 
 // // Iteration #8: Bonus
 
@@ -111,5 +148,3 @@ average = total / averageWordLength.length
 //   [20, 69, 36, 41, 72, 30, 23, 88, 34, 62, 99, 69, 82, 67, 59, 85, 74, 4, 36, 16],
 //   [20, 73, 35, 29, 78, 31, 90, 1, 74, 31, 49, 71, 48, 86, 81, 16, 23, 57, 5, 54],
 //   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
-// ];
-// 
